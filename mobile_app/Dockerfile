@@ -24,6 +24,7 @@ COPY . .
 
 # Build the web app
 RUN flutter pub get
+RUN flutter create . --platforms web
 RUN flutter build web --release
 
 # Stage 2: Serve the app using Nginx
